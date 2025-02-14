@@ -19,7 +19,7 @@ app.use(expressPino);
 app.post('/sentiment', async (req, res) => {
 
     // Task 4: extract the sentence parameter from the request body
-    const { sentence } = req.body;
+    const { sentence } = req.query;
 
     if (!sentence) {
         logger.error('No sentence provided');
