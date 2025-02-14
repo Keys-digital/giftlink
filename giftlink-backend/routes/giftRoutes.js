@@ -2,9 +2,10 @@
 const express = require('express');
 const router = express.Router();
 const connectToDatabase = require('../db');  // Import the MongoDB connection function
+const logger = require('../logger');
 
 // Retrieve all gifts
-router.get('/', async (req, res) => { 
+router.get('/', async (req, res, next) => { 
     try {
         // Task 1: Connect to MongoDB and store connection to db constant
         const db = await connectToDatabase(); // Connect to the database
@@ -18,13 +19,13 @@ router.get('/', async (req, res) => {
         // Task 4: Return the gifts using the res.json method
         res.json(gifts); // Return the array of gifts as a JSON response
     } catch (e) {
-        console.error('Error fetching gifts:', e);
-        res.status(500).send('Error fetching gifts'); // Handle any errors
+        logger.error('Error fetching gifts:', e); // Use the correct logger method
+        next(e);
     }
 });
 
 // Retrieve a specific gift by ID
-router.get('/:id', async (req, res) => {
+router.get('/:id', async (req, res, next) => {
     try {
         // Task 1: Connect to MongoDB and store connection to db constant
         const db = await connectToDatabase(); // Connect to the database
@@ -42,10 +43,10 @@ router.get('/:id', async (req, res) => {
             return res.status(404).send('Gift not found'); // Handle case where gift doesn't exist
         }
 
-        res.json(gift); // Return the found gift as a JSON response
+        res.json(gift); // Return the specific gift
     } catch (e) {
-        console.error('Error fetching gift:', e);
-        res.status(500).send('Error fetching gift'); // Handle any errors
+        logger.error('Error fetching gift:', e); // Use the correct logger method
+        next(e);
     }
 });
 
