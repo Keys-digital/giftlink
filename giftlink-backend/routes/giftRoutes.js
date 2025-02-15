@@ -1,7 +1,7 @@
 // giftRoutes.js
 const express = require('express');
 const router = express.Router();
-const connectToDatabase = require('../db');  // Import the MongoDB connection function
+const connectToDatabase = require('../models/db');  // Import the MongoDB connection function
 const logger = require('../logger');
 
 // Retrieve all gifts

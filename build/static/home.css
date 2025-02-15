@@ -42,18 +42,44 @@ body::before {
 /* Task 4: Add styles for headings, paragraphs, and buttons */
 h1, h2 {
     font-size: 4rem; /* Large font size for main heading */
-    color: #333; /* Darker text color for headings */
+    color: #003366; /* Deep blue for the main heading */
     margin-bottom: 0.5em;
     font-weight: 700;
 }
 
+h2 {
+    color: #FF6347; /* Tomato color for subheading */
+}
+
 .lead {
     font-size: 1.5rem; /* Large font size for the quote */
-    color: #333; /* Dark text color for better readability */
+    color: #2F4F4F; /* Dark slate gray for better readability */
     margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for legibility */
 }
 
+/* Paragraph styling to make it distinct from background */
+p {
+    font-size: 1rem;
+    color: #333; /* Dark gray for general paragraph text */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 1rem; /* Add padding to make the text more readable */
+    border-radius: 8px; /* Rounded corners to blend with the design */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow to create depth */
+    max-width: 90%; /* Ensure paragraphs fit well in mobile view */
+    margin-left: auto;
+    margin-right: auto; /* Center-align paragraphs */
+}
+
+/* Highlighted text */
+.highlight-text {
+    color: #f50057; /* Vibrant pink for highlighted text */
+    font-weight: bold;
+}
+
+/* Button Styles */
 .btn-primary {
     background-color: #1E90FF; /* Vibrant color for the button */
     color: #FFFFFF; /* White text for contrast */
@@ -81,5 +107,8 @@ h1, h2 {
     }
     .lead {
         font-size: 1.25rem; /* Smaller font size for text on mobile */
+    }
+    .content {
+        padding: 1rem; /* Adjust padding on smaller screens */
     }
 }
