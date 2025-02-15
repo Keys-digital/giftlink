@@ -9,7 +9,7 @@ export default function Navbar() {
                 <ul className="navbar-nav">
                     {/* Task 1: Add links to Home and Gifts below */}
                     <li className="nav-item">
-                        <a className="nav-link" href="/">Home</a> {/* Link to home */}
+                        <a className="nav-link" href="/home.html">Home</a> {/* Link to home */}
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="/main">Gifts</a> {/* Link to MainPage */}

@@ -14,9 +14,17 @@
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.20.1",
         "react-scripts": "^5.0.1",
-        "web-vitals": "^2.1.4"
+        "serialize-javascript": "^6.0.2",
+        "shell-quote": "^1.8.2",
+        "sockjs-client": "^1.6.1",
+        "terser": "^5.39.0",
+        "tough-cookie": "^5.1.1",
+        "web-vitals": "^2.1.4",
+        "webpack-dev-middleware": "^7.4.2",
+        "yargs-parser": "^21.1.1"
     },
     "scripts": {
+        "postbuild": "cp -r build ../giftwebsite/",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -39,10 +47,5 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    },
-    "devDependencies": {
-        "eslint": "^8.57.1",
-        "eslint-config-react-app": "^7.0.1",
-        "eslint-plugin-react": "^7.37.4"
     }
 }
