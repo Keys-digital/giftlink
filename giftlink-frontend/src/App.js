@@ -9,9 +9,8 @@ import Profile from './components/Profile/Profile';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-function App() {const navigate = useNavigate(); // Line 13
-  navigate('/some-path'); // Use the navigate variable
-  // Other code...
+function App() {
+  // No need to call `navigate()` here if you're not using it in this file
   return (
         <>
         <Navbar/>
