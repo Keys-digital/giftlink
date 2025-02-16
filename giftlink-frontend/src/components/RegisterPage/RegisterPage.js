@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 
 import './RegisterPage.css';
@@ -47,11 +45,12 @@ return (
                     </div>
 
                     {/* email  */}
+
                     <div className="mb-3">
                         <label htmlFor="email" className="form-label">Email</label>
                         <input
                             id="email"
-                            type="text"
+                            type="email"
                             className="form-control"
                             placeholder="Enter your email"
                             value={email}
@@ -59,6 +58,8 @@ return (
                         />
                     </div>
 
+                    {/* password  */}
+                    
                     <div className="mb-4">
                         <label htmlFor="password" className="form-label">Password</label>
                         <input
