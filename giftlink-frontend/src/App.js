@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 function App() {
-  // No need to call `navigate()` here if you're not using it in this file
+  return (
   return (
         <>
         <Navbar/>
