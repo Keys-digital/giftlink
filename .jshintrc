@@ -1,3 +1,9 @@
 {
-  "esversion": 8
+  "esversion": 8,
+  "esnext": true,
+  "browser": true,
+  "node": true,
+  "undef": true,
+  "unused": true,
+  "strict": true
 }
