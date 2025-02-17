@@ -1,4 +1,5 @@
 /*jshint esversion: 8 */
+"use strict";
 const express = require('express');
 const router = express.Router();
 const connectToDatabase = require('../models/db');
