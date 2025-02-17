@@ -1,0 +1,15 @@
+{
+  "esversion": 8,
+  "browser": true,
+  "node": true,
+  "predef": ["document", "window"],
+  "undef": true,
+  "unused": true,
+  "globals": {
+    "React": false,
+    "JSX": false
+  },
+  "strict": "global",
+  "maxerr": 50,
+  "maxlen": 120
+}
