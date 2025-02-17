@@ -1,6 +1,5 @@
 {
   "esversion": 8,
-  "esnext": true,
   "browser": true,
   "node": true,
   "undef": true,
