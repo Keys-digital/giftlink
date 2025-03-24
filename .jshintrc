@@ -1,0 +1,11 @@
+{
+  "esversion": 8,
+  "browser": true,
+  "node": true,
+  "undef": true,
+  "unused": false,
+  "strict": true,
+  "globals": {
+    "Promise": true
+  }
+}

@@ -1,0 +1,54 @@
+name: "CI/CD"
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  lint_js:
+    name: Lint JavaScript Files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Linter
+        run: |
+          # Run JSHint on the specified files
+          npx jshint ./giftlink-backend/routes/searchRoutes.js
+
+  client_build:
+    name: Build and Deploy Client
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: |
+          cd giftlink-frontend
+          npm install
+
+      - name: Run build
+        run: |
+          cd giftlink-frontend
+          npm run build
+          echo "Client-side build successfully"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: giftlink-frontend/build
